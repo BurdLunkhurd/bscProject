@@ -33,6 +33,10 @@ prtemissioncomparison.py
 
 	-- plots all 4 prt emission spectra, both in fp/fs and in fp units.
 
+plotmodel.py
+
+	-- plots the pt profile and molecular abundances of the atmospheric model I got from the research group.
+
 pandexoComparisonGeneral2.py
 
 	-DoPandexo(instrument,source): 
