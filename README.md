@@ -22,6 +22,9 @@ singleEmission Import no co2.py
 singleEmission Import no so2.py
 -- Import the provided atmosphere model and generate a planetary emission spectrum using petitRADTRANS, but not taking into account SO2. Saves the data in a .txt
 
+prtemissioncomparison.py
+-- plots all 4 prt emission spectra, both in fp/fs and in fp units.
+
 pandexoComparisonGeneral2.py
 -- Contains functions:
 DoPandexo(instrument,source): 
