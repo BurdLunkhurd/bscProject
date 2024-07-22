@@ -72,10 +72,27 @@ provide: type of spectrum ("all","noco","noco2","noso2"), a JWST instrument
 return: array for x and y of fitted line, optimal parameters, chi2 for fit compared to input pandexo result, 
 
 FItTest(molecule,instrument,plot=True,show=False):
-provide: type of spectrum ("all","noco","noco2","noso2"), a JWST instrument
+provide: type of spectrum ("all","noco","noco2","noso2"), a JWST instrument,
 return: chi2s and plot for a comparison of linear fit and input model through the pandexo result for a given molecule.
 calls linearFit, then calls modelChi2
 
+BlackbodyFunc(wave,temp):
+provide: wavelengths, temperature
+returns: emission 
+simply uses plancks law to give a blackbody emission curve for the specified wavelengths. used for fitting.
 
+fitBlackbody(instrument):
+provide: JWST instrument
+return: fitted temperature, error on the fitted temperature, reduced chi2, instrument, binning used.
+takes a pandexo result of the spectrum containing all molecules of a given instrument, and transforms it into an emission spectrum. then fits a blackbody curve to it and returns the parameters.
 
+CHI2testAll():
+provide:
+return:
+prints/plots all chi2s for linear fit tests for all molecules and molecules
+
+plotAllComparisons():
+provide:
+return:
+prints/plots all comparisons for every molecule compared to the spectrum of all molecules. 
 
